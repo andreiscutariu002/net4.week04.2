@@ -2,7 +2,7 @@
 {
     using System;
 
-    internal class Worker : Human
+    public class Worker : Human
     {
         public Worker(string firstName, string lastName, int weekSalary, int workHoursPerDay)
             : base(firstName, lastName)

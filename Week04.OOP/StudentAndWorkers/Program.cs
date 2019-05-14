@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Models;
 
-    internal class Program
+    public class Program
     {
         private static void Main(string[] args)
         {

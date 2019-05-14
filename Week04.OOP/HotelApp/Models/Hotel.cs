@@ -31,5 +31,25 @@
 
             this.Rooms.Add(room);
         }
+
+        public void Print()
+        {
+            Console.WriteLine($"Hotel {this.Name}, City {this.City}");
+        }
+
+        public IList<Room> FindRoomsBelow(int amount)
+        {
+            var list = new List<Room>();
+
+            foreach (var room in this.Rooms)
+            {
+                if (room.IsBelow(amount))
+                {
+                    list.Add(room);
+                }
+            }
+
+            return list;
+        }
     }
 }

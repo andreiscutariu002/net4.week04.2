@@ -35,6 +35,8 @@
                 hotel.AddRoom(room);
             }
 
+            Console.WriteLine();
+
             return hotel;
         }
     }

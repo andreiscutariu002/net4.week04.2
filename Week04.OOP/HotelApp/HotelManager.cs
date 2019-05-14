@@ -26,6 +26,8 @@
             {
                 if (hotel.Name == name && hotel.City == city)
                 {
+                    Console.WriteLine($"Delete hotel {name} from {city}.");
+
                     hotelToRemove = hotel;
                     break;
                 }
@@ -34,6 +36,32 @@
             if (hotelToRemove != null)
             {
                 this.hotels.Remove(hotelToRemove);
+            }
+        }
+
+        public void PrintHotels()
+        {
+            foreach (var hotel in this.hotels)
+            {
+                hotel.Print();
+            }
+
+            Console.WriteLine();
+        }
+
+        public void ShowRoomsBelow(int amount)
+        {
+            foreach (var hotel in this.hotels)
+            {
+                var rooms = hotel.FindRoomsBelow(amount);
+
+                foreach (var room in rooms)
+                {
+                    Console.WriteLine("Find a room:");
+                    hotel.Print();
+                    room.Print();
+                    Console.WriteLine();
+                }
             }
         }
     }
