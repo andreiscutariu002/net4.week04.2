@@ -14,9 +14,9 @@
 
         public string LastName { get; set; }
 
-        protected void Print()
+        internal void Print()
         {
-            Console.WriteLine($"Student: {this.FirstName} {this.LastName}");
+            Console.WriteLine($"Human: {this.FirstName} {this.LastName}");
         }
     }
 }
