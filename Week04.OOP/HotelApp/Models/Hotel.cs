@@ -24,7 +24,7 @@
             // code that validates data for Hotel class, should be inside the Hotel
             if (room.Adults == 0)
             {
-                Console.WriteLine("Every room should have at least an adult!");
+                Console.WriteLine("## Every room should have at least an adult!");
 
                 return;
             }

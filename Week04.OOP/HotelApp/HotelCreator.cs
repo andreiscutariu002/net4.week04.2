@@ -7,13 +7,13 @@
     {
         public Hotel CreateAHotel()
         {
-            Console.Write("Enter hotel name:");
+            Console.Write("Enter hotel name: ");
             var name = Console.ReadLine();
 
-            Console.Write("\tEnter hotel city:");
+            Console.Write("Enter hotel city: ");
             var city = Console.ReadLine();
 
-            Console.Write($"\tEnter number of rooms for {name}:");
+            Console.Write($"Enter number of rooms for {name}: ");
             var nr = int.Parse(Console.ReadLine());
 
             Hotel hotel = new Hotel(name, city);
@@ -22,13 +22,13 @@
             {
                 var roomNumber = i;
 
-                Console.Write($"\t Adults for room {roomNumber}:");
+                Console.Write($"Adults for room {roomNumber}: ");
                 var adults = int.Parse(Console.ReadLine());
 
-                Console.Write($"\t Adults for room {roomNumber}:");
+                Console.Write($"Children for room {roomNumber}: ");
                 var children = int.Parse(Console.ReadLine());
 
-                Console.Write($"\t Amount for room {roomNumber}:");
+                Console.Write($"Amount for room {roomNumber}: ");
                 var amount = int.Parse(Console.ReadLine());
 
                 var room = new Room(roomNumber, adults, children, new Rate(amount, "USD"));
