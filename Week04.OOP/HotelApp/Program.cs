@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HotelApp
+﻿namespace HotelApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            var hotelCreator = new HotelCreator();
+            var hotelManager = new HotelManager();
+
+            var hotel1 = hotelCreator.CreateAHotel();
+            hotelManager.Add(hotel1);
         }
     }
 }
